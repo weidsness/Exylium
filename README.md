@@ -1,2 +1,2 @@
-# Exylium
+# Exylium (EXLM)
 basic cryptocurrency development
