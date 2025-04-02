@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center everything */
+    position: relative; /* Needed for absolute positioning */
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.hamburger {
+    position: absolute;
+    left: 20px; /* Keep the menu button on the left */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Side Navigation */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: -50%;
+    width: 25%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: left 0.3s ease-in-out;
+}
+
+#side-menu a, #connect-wallet {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+#side-menu a:hover, #connect-wallet:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Close button */
+#close-menu {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* Backdrop Effect */
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show menu */
+#side-menu.show {
+    left: 0;
+}
+
+#backdrop.show {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px;
+}
+
+.price-box {
+    margin-top: 20px;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    #side-menu {
+        width: 60%;
+        left: -60%;
+    }
+}
