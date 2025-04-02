@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const backdrop = document.getElementById("backdrop");
 
     function updatePrice() {
-        const fakePrice = (Math.random() * 1000000000 + 1).toFixed(2);
+        const fakePrice = (Math.random() * 5 + 1).toFixed(2);
         priceElement.textContent = `$${fakePrice}`;
     }
 
